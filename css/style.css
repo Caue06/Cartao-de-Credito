@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cousine", monospace;
+    color: var(--color-white-700);
+    text-transform: uppercase;
+}
+
+:root{
+    --color-white-500: rgba(255, 255, 255,0.5);
+    --color-white-600: rgba(255, 255, 255,0.66);
+    --color-white-700: rgba(255, 255, 255,0.70);
+    --color-white-800: rgba(255, 255, 255,0.77);
+    --color-white-1000: #fff;
+    --bg-blue: #080C3A;
+    
+}
+
+body{
+    background-color: var(--bg-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.cartao{
+    width: 470px;
+    border-radius: 25px;
+    border: var(--color-white-1000) 2px inset;
+    padding: 44px 32px;
+    padding-bottom: 32px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.4),rgba(255,255,255,0.01));
+
+
+
+    & .logo-empresa{
+        display: flex;
+        align-items: center;  
+        justify-content: space-between;
+        margin-bottom: 90px;
+
+        & p{
+            font-size: 18px;
+        }
+    }
+
+    & .dados{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        & p{
+            font-size: 24px;
+        }
+    }
+
+    & .nome-validade{
+        display: flex;
+        justify-content: space-between;
+
+
+        & p:first-child{
+            color: var(--color-white-500);
+            font-size: 18px;
+        }
+
+        & p:last-child{
+            color: var(--color-white-500);
+            font-size: 14px;
+        }
+    }
+}
+
+#circulo{
+    position: absolute;
+    z-index: -1;
+    right: 300px;
+    bottom:80px;
+    animation: flutuar 2s infinite linear alternate-reverse;
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translate(10px);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateX(-10px);
+    }
+}
